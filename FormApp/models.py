@@ -10,3 +10,6 @@ class Doctor(models.Model):
     availability = models.CharField(max_length=100)
     additional_details = models.TextField(null=True,blank=True)
     slug = models.SlugField(unique=True)
+    
+    def __str__(self):
+        return self.name
