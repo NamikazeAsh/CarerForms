@@ -5,8 +5,7 @@ import uuid
 
 def generate_form_link(request):
     form_slug = str(uuid.uuid4())[:8]  # Generate a unique slug for the form
-    doctor = Doctor(slug=form_slug)  # Create a Doctor instance with the generated slug
-    doctor.save()  # Save the Doctor instance to the database
+    
     return redirect('open_form', form_slug=form_slug)
 
 def open_form(request, form_slug):

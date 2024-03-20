@@ -1,11 +1,12 @@
 from django import forms
+from .models import *
 
 class DoctorForm(forms.Form):
-    name = forms.CharField(max_length=100)
-    speciality = forms.CharField(max_length=100)
-    sub_speciality = forms.CharField(max_length=100)
-    qualification = forms.CharField(widget=forms.Textarea)
-    experience = forms.CharField(max_length=100)
-    address = forms.CharField(widget=forms.Textarea)
-    availability = forms.CharField(max_length=100)
-    additional_details = forms.CharField(widget=forms.Textarea)
+    name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    speciality = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    sub_speciality = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    qualification = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3}))
+    experience = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}))
+    address = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3}))
+    availability = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    additional_details = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 3}))

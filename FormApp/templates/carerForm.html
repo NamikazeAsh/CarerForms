@@ -9,41 +9,41 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Random URL Form</h1>
+        <h1>CarerAI Doctor Form</h1>
         <form method="post" action="">
             {% csrf_token %}
             <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="id_name" class="form-label">Name:</label>
+                {{ form.name }}
             </div>
             <div class="mb-3">
-                <label for="speciality" class="form-label">Speciality:</label>
-                <input type="text" class="form-control" id="speciality" name="speciality" required>
+                <label for="id_speciality" class="form-label">Speciality:</label>
+                {{ form.speciality }}
             </div>
             <div class="mb-3">
-                <label for="sub_speciality" class="form-label">Sub Speciality:</label>
-                <input type="text" class="form-control" id="sub_speciality" name="sub_speciality" required>
+                <label for="id_sub_speciality" class="form-label">Sub Speciality:</label>
+                {{ form.sub_speciality }}
             </div>
             <div class="mb-3">
-                <label for="qualification" class="form-label">Qualification:</label>
-                <textarea class="form-control" id="qualification" name="qualification" rows="3" required></textarea>
+                <label for="id_qualification" class="form-label">Qualification:</label>
+                {{ form.qualification }}
+            </div>
+            <div class="mb-3" class="form-control">
+                <label for="id_experience" class="form-label">Experience:</label>
+                {{ form.experience }}
             </div>
             <div class="mb-3">
-                <label for="experience" class="form-label">Experience:</label>
-                <input type="text" class="form-control" id="experience" name="experience" required>
+                <label for="id_address" class="form-label">Address:</label>
+                {{ form.address }}
             </div>
             <div class="mb-3">
-                <label for="address" class="form-label">Address:</label>
-                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="availability" class="form-label">Availability Days with Time:</label>
+                <label for="id_availability" class="form-label">Availability Days with Time:</label>
                 <!-- Add your calendar or time picker input here -->
-                <input type="text" class="form-control" id="availability" name="availability" required>
+                {{ form.availability }}
             </div>
             <div class="mb-3">
-                <label for="additional_details" class="form-label">Additional Details:</label>
-                <textarea class="form-control" id="additional_details" name="additional_details" rows="3"></textarea>
+                <label for="id_additional_details" class="form-label">Additional Details:</label>
+                {{ form.additional_details }}
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
