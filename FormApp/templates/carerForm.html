@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +35,15 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
+                <!-- Logo -->
+                <div class="text-center mb-4">
+                    <img src="{% static 'logo.png' %}" alt="Logo" style="width: 150px; height: auto;">
+                </div>
+                <!-- Card -->
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="card-title text-center mb-4">CarerAI Doctor Form</h1>
-                        <form method="post" action="">
+                        <h2 class="card-title text-center mb-4" style="font-weight: 500;">Doctor Info</h2>
+                        <form method="post">
                             {% csrf_token %}
                             <div class="mb-3">
                                 <label for="id_name" class="form-label">Name</label>
