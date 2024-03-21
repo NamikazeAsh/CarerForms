@@ -11,7 +11,7 @@ class DoctorForm(forms.ModelForm):
             'sub_speciality': forms.TextInput(attrs={'class': 'form-control'}),
             'qualification': forms.TextInput(attrs={'class': 'form-control'}),
             'experience': forms.TextInput(attrs={'class': 'form-control'}),
-            'address': forms.TextInput(attrs={'class': 'form-control'}),
+            'address': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
             'availability': forms.TextInput(attrs={'class': 'form-control'}),
             'additional_details': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
